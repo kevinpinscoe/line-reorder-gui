@@ -8,26 +8,30 @@ FILES Bash variable I use a manifest file: `mapfile -t FILES < contents/manifest
 
 Example:
 
-`pandoc \`
-`  --metadata-file=metadata.yaml \`
-`  --resource-path=contents \`
-`  --from=markdown \`
-`  --to=pdf \`
-`  --pdf-engine=xelatex \`
-`  --highlight-style=monochrome \`
-`  -o "$OUT" \`
-`  --toc --table-of-contents --toc-depth=2 \`
-`  --top-level-division=chapter \`
-` --number-sections \`
-`  "${FILES[@]}"`
+```
+pandoc \
+  --metadata-file=metadata.yaml \
+  --resource-path=contents \
+  --from=markdown \
+  --to=pdf \
+  --pdf-engine=xelatex \
+  --highlight-style=monochrome \
+  -o "$OUT" \
+  --toc --table-of-contents --toc-depth=2 \
+  --top-level-division=chapter \
+ --number-sections \
+  "${FILES[@]}"
+  ```
 
 The Manifest file is a book order of file paths to Markdown content in te order I wish to appear in the final book product PDF.
 
 Example:
 
-`contents/00-title/00-title-page.md`
-`contents/chap01/section-a-title.md`
-`contents/chap01/section-b-title.md`
+```
+contents/00-title/00-title-page.md
+contents/chap01/section-a-title.md
+contents/chap01/section-b-title.md
+```
 
 and so forth.
 
@@ -39,12 +43,15 @@ thinking about how sections go together and in what order of precedence to put t
 
 ## Operation
 
-In my case Fedora 42:
+In my case Fedora Linux release 42:
 
-`sudo dnf install python3-pyside6`
+```
+sudo dnf install python3-pyside6
 
-`pip install --user PySide6` or `pip3 install --user PySide6`
-`python line_reorder.py /full/path/to/your.txt`
+pip install --user PySide6` or `pip3 install --user PySide6
+
+python line_reorder.py /full/path/to/your.txt
+```
 
 ## What happens
 
