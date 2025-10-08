@@ -6,6 +6,8 @@ I am writing books and documents using Markdown, converting to PDF output. In th
 I use the Pandoc tool. I use the Pandoc command line option "${FILES[@]}" and to build that
 FILES Bash variable I use a manifest file: `mapfile -t FILES < contents/manifest.txt`.
 
+For more infomation on how I create books see [https://github.com/kevinpinscoe/how-I-make-books-now](https://github.com/kevinpinscoe/how-I-make-books-now)
+
 Example:
 
 ```
