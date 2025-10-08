@@ -23,7 +23,8 @@ pandoc \
   "${FILES[@]}"
   ```
 
-The Manifest file is a book order of file paths to Markdown content in te order I wish to appear in the final book product PDF.
+The Manifest file is a book order of file paths to Markdown content in the order I wish
+for them to appear in the final book product (PDF).
 
 Example:
 
@@ -36,12 +37,12 @@ contents/chap01/section-b-title.md
 and so forth.
 
 When I write I like to think in sections which I usually title as "## Section name" 
-in Markdown. This allows me edit the section and think about it easier with less clutter. 
+in Markdown. This allows me to edit the section and think about it easier with less clutter. 
 
 To that end this tool allows me to re-order the manifest file visually while
 thinking about how sections go together and in what order of precedence to put them.
 
-## Operation
+## Install and operation
 
 In my case Fedora Linux release 42:
 
