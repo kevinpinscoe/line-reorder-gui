@@ -6,7 +6,7 @@ I am writing books and documents using Markdown, converting to PDF output. In th
 I use the Pandoc tool. I use the Pandoc command line option "${FILES[@]}" and to build that
 FILES Bash variable I use a manifest file: `mapfile -t FILES < contents/manifest.txt`.
 
-For more infomation on how I create books see [https://github.com/kevinpinscoe/how-I-make-books-now](https://github.com/kevinpinscoe/how-I-make-books-now)
+For more information on how I create books see [https://github.com/kevinpinscoe/how-I-make-books-now](https://github.com/kevinpinscoe/how-I-make-books-now)
 
 Example:
 
@@ -54,6 +54,28 @@ sudo dnf install python3-pyside6
 pip install --user PySide6` or `pip3 install --user PySide6
 
 python line_reorder.py /full/path/to/your.txt
+```
+
+### Installing into ~/bin
+
+Copy both files into `~/bin` and make the wrapper executable:
+
+```bash
+cp line_reorder.py ~/bin/
+cp line-reorder ~/bin/
+chmod +x ~/bin/line-reorder
+```
+
+Make sure `~/bin` is on your `PATH` (add this to `~/.bashrc` or `~/.bash_profile` if it isn't already):
+
+```bash
+export PATH="$HOME/bin:$PATH"
+```
+
+Then you can run it from anywhere:
+
+```bash
+line-reorder /full/path/to/your.txt
 ```
 
 ## What happens
